@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jae-hoon Park | Portfolio</title>
+  <meta name="description" content="Jae-hoon Park의 포트폴리오 사이트입니다." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#top">Jae-hoon Park</a>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">소개</a></li>
+        <li><a href="#skills">기술 스택</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#contact">연락처</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="top" class="hero container">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Jae-hoon Park</h1>
+      <p class="hero-subtitle">여기에 한 줄 소개(직무, 관심 분야 등)를 적어주세요.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
+        <a class="btn btn-outline" href="#contact">연락하기</a>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-text">
+        여기에 자기소개를 작성하세요. 어떤 일을 해왔고, 무엇에 관심이 있으며,
+        어떤 목표를 가지고 있는지 자유롭게 소개해 주세요.
+      </p>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2 class="section-title">기술 스택</h2>
+      <ul class="skills-grid">
+        <li class="skill-item">Skill 1</li>
+        <li class="skill-item">Skill 2</li>
+        <li class="skill-item">Skill 3</li>
+        <li class="skill-item">Skill 4</li>
+        <li class="skill-item">Skill 5</li>
+        <li class="skill-item">Skill 6</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2 class="section-title">프로젝트</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>프로젝트 이름 1</h3>
+          <p>프로젝트에 대한 간단한 설명을 작성하세요.</p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>프로젝트 이름 2</h3>
+          <p>프로젝트에 대한 간단한 설명을 작성하세요.</p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>프로젝트 이름 3</h3>
+          <p>프로젝트에 대한 간단한 설명을 작성하세요.</p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2 class="section-title">연락처</h2>
+      <p class="section-text">연락 가능한 이메일이나 SNS 링크를 여기에 추가하세요.</p>
+      <ul class="contact-list">
+        <li><a href="mailto:example@email.com">example@email.com</a></li>
+        <li><a href="https://github.com/Jae-hoon-Park" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Jae-hoon Park. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
