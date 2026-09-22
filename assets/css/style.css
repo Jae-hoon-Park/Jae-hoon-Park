@@ -5,7 +5,7 @@
   --color-text-muted: #5a5a5a;
   --color-accent: #2563eb;
   --color-border: #e5e7eb;
-  --max-width: 960px;
+  --max-width: 1040px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -177,11 +177,69 @@ a:hover {
 .section-title {
   font-size: 1.6rem;
   margin: 0 0 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
 }
 
 .section-text {
   color: var(--color-text-muted);
   max-width: 42rem;
+}
+
+.section-text + .section-text {
+  margin-top: 1rem;
+}
+
+.career-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.career-item {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.5rem;
+}
+
+.career-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.career-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.career-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.career-period {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.career-item p {
+  margin: 0;
+  color: var(--color-text-muted);
 }
 
 .skills-grid {
@@ -224,6 +282,73 @@ a:hover {
   gap: 1rem;
   margin-top: 1rem;
   font-size: 0.9rem;
+}
+
+.case-study {
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  background: var(--color-bg-alt);
+}
+
+.case-study:last-child {
+  margin-bottom: 0;
+}
+
+.case-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.case-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 380px;
+}
+
+.case-body {
+  padding: 1.75rem;
+}
+
+.case-tag {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+}
+
+.case-body h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.3rem;
+}
+
+.case-body > p {
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+}
+
+.case-points {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.case-points strong {
+  color: var(--color-text);
+}
+
+.case-result {
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
 }
 
 .contact-list {
