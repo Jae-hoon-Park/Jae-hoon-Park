@@ -409,6 +409,73 @@ a:hover {
   color: var(--color-text);
 }
 
+.case-detail h4 {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.case-detail h4:first-of-type {
+  margin-top: 0;
+}
+
+.detail-text {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 0.5rem 0 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid var(--color-border);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.compare-table th:first-child,
+.compare-table td:first-child {
+  white-space: nowrap;
+}
+
+.compare-table th {
+  background: var(--color-bg);
+  font-weight: 600;
+}
+
+.compare-table td {
+  color: var(--color-text-muted);
+}
+
+.detail-quote {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+
+.detail-quote:last-child {
+  margin-bottom: 0;
+}
+
 .contact-list {
   list-style: none;
   padding: 0;

@@ -138,7 +138,16 @@
           </p>
 
           <details class="case-detail">
-            <summary>주요 화면 설계 및 정책 상세 보기</summary>
+            <summary>프로젝트 상세 보기 (배경·화면 설계·트러블슈팅·회고)</summary>
+
+            <h4>배경 및 Pain Point</h4>
+            <ul class="detail-list">
+              <li><strong>업무 파편화 및 이력 관리 부재</strong> — 전화·메일로 소통 채널이 분산되고 계약서를 수기로 관리해, 업무 히스토리 추적이 불가능하고 담당자 부재 시 업무 연속성이 끊어지는 리스크가 있었습니다.</li>
+              <li><strong>수기 기반의 비효율적 캠페인 운영</strong> — 15개 매체사별로 상이한 신청 양식을 수기 문서로 주고받아, 신규 매체사 입점이나 양식 변경 시마다 시스템을 새로 코딩해야 하는 경직된 구조였습니다.</li>
+              <li><strong>정산 프로세스의 불투명성</strong> — 계약 조건과 발송 데이터가 매칭되지 않는 수동 세금계산서 발행 방식이라, 증빙을 위한 데이터 대조에 막대한 리소스가 들고 휴먼 에러 가능성이 컸습니다.</li>
+            </ul>
+
+            <h4>주요 화면 설계 및 정책</h4>
             <ul class="detail-list">
               <li><strong>메뉴 구조(IA)</strong> — 계약 관리(서식 설정·입력 항목 관리) / 캠페인 신청 관리(서식 설정·확정서 설정) / 정산 관리 / 커뮤니케이션(업무 코멘트·전자결재) / 시스템 관리(관리자·권한·감사)로 서비스 영역을 구조화</li>
               <li><strong>다이나믹 서식 렌더링 규칙</strong> — 계약 유형(매입/매출), 매체사 유형(15종)에 따라 입력 항목 관리에 등록된 항목을 셀렉트 방식으로 조합해 서식을 구성. 매체사·메시지 유형 선택 시 최신 버전 서식이 실시간으로 자동 호출되도록 설계해 오입력 방지</li>
@@ -146,6 +155,37 @@
               <li><strong>정산 처리 플로우</strong> — 확정 서명 완료 캠페인 기준으로 정산 데이터를 누적하고, 동일 사업자·세금계산서 이메일 기준으로 다건 청구서(1:N)를 일괄 생성한 뒤 증빙 파일과 자동 연동</li>
               <li><strong>요구사항 정의 프로세스</strong> — RFP 분석 → 현업 담당자 인터뷰 → 요구사항 정의서 작성 → 요구사항 ID·화면 ID를 대조하는 추적표로 변경 이력까지 관리</li>
             </ul>
+
+            <h4>트러블슈팅 — 변경 관리 위원회(CCB)</h4>
+            <p class="detail-text">
+              Client(현대), On-shore(국내 기획/서버), Off-shore(베트남 개발) 3개 조직이 얽힌 복잡한 협업
+              구조에서, 발생한 이슈를 주간·월간 회의로 수집하고 변경 관리 위원회(CCB)에서 영향도(공수·일정·비용)를
+              분석해 승인/반려/보류를 결정하는 프로세스를 운영했습니다. 이를 통해 이해관계자 간 의사결정 체계를
+              효율화하고, 논의 이력을 Teams·Confluence에 기록해 추적 가능하게 관리했습니다.
+            </p>
+
+            <h4>성과 &amp; 회고</h4>
+            <div class="table-scroll">
+              <table class="compare-table">
+                <thead>
+                  <tr><th>구분</th><th>AS-IS</th><th>TO-BE</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>계약 방식</td><td>오프라인 종이 계약(대면/등기)</td><td>협력사 포털 기반 온라인 계약(전자서명 API 연동)</td></tr>
+                  <tr><td>신청 업무</td><td>엑셀 기반 수기 작성(이력 관리 불가)</td><td>시스템 내 다이나믹 폼 신청(DB 기반 통합 관리)</td></tr>
+                  <tr><td>정산 연동</td><td>수기 대조를 통한 수동 정산</td><td>시스템 데이터 매핑 기반 자동 정산 API 연동</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <blockquote class="detail-quote">
+              "사용자의 자유도보다 시스템의 안정성과 정산 무결성을 위해 설계한 셀렉트 방식의 서식 조립이
+              결과적으로 운영 리스크를 줄이는 핵심 장치가 되었습니다."
+            </blockquote>
+            <blockquote class="detail-quote">
+              "오프라인에 흩어져 있던 비즈니스 고리를 시스템 안으로 연결하는 것이 기획자의 역할임을
+              배웠습니다. 종이 계약서가 DB化되는 과정을 통해 데이터가 비즈니스의 자산이 되는 과정을
+              경험했습니다."
+            </blockquote>
           </details>
         </div>
       </article>
@@ -173,7 +213,16 @@
           </p>
 
           <details class="case-detail">
-            <summary>주요 화면 설계 상세 보기 (와이어프레임)</summary>
+            <summary>프로젝트 상세 보기 (배경·화면 설계·회고)</summary>
+
+            <h4>배경 및 Pain Point</h4>
+            <ul class="detail-list">
+              <li><strong>번거로운 구매 단계</strong> — 정기구매를 위해 반드시 장바구니를 거쳐야 하는 등 결제까지의 동선이 길어 이탈률이 발생했습니다.</li>
+              <li><strong>정보 전달의 불명확성</strong> — 정기구매의 필수 조건인 '최소 구매 충족' 정보가 시각적으로 누락되어 사용자 혼선과 CS 문의를 유발했습니다.</li>
+              <li><strong>고정된 마케팅 영역</strong> — 상품 목록 배너가 단순 이미지로만 제공되어, 이미지 내 다양한 상품을 개별 링크로 연결하기 어려운 운영상의 한계가 있었습니다.</li>
+            </ul>
+
+            <h4>주요 화면 설계 (와이어프레임)</h4>
             <div class="detail-gallery">
               <img src="assets/img/project2-wireframe-product.jpg" alt="상품 등록 화면 와이어프레임" />
               <img src="assets/img/project2-wireframe-subscription.jpg" alt="정기구매 상품 추가 팝업 와이어프레임" />
@@ -183,6 +232,21 @@
               <li><strong>정기구매 상품 추가 팝업</strong> — 브랜드/카테고리 검색 → 옵션 선택 → 담기 → 선택 목록 확인 → 총 합계 자동 계산까지 하나의 팝업 안에서 완결되는 플로우로 설계해 이탈 없이 상품 구성을 마치도록 유도</li>
               <li><strong>회원 유형별 분기</strong> — 비회원/플래너 회원/커스터머 회원 각각의 기본 정보 입력 항목과 주문 플로우를 분리 설계해 회원 등급별 데이터 정합성 확보</li>
             </ul>
+
+            <h4>성과 &amp; 회고</h4>
+            <ul class="detail-list">
+              <li><strong>구매 전환율(CVR) 최적화</strong> — 듀얼 장바구니 도입으로 결제 동선을 획기적으로 단축하고, 장바구니 재이동에 따른 이탈을 방어했습니다.</li>
+              <li><strong>사용자 인지 부하 감소</strong> — '최소 구매 충족' 조건을 직관적 UI로 시각화해 정보 전달의 불명확성을 해소하고 CS 리스크를 사전 차단했습니다.</li>
+              <li><strong>운영 효율 극대화</strong> — 좌표 기반 인터랙티브 배너로 하나의 이미지에서 다수 상품을 개별 링크로 연결해 마케팅 활용도를 높였습니다.</li>
+            </ul>
+            <blockquote class="detail-quote">
+              "비즈니스 성장은 '당연한 정보'의 시각화에서 시작된다 — 기획자는 기능을 만드는 것을 넘어
+              사용자가 기능을 발견하고 이해하는 과정까지 설계해야 함을 재확인했습니다."
+            </blockquote>
+            <blockquote class="detail-quote">
+              "복잡한 비즈니스 로직을 심플한 UX로 풀어내는 힘 — 시스템의 복잡도는 기획자가 짊어지되
+              사용자는 심플함만 누려야 한다는 기획 철학을 다시금 정립했습니다."
+            </blockquote>
           </details>
         </div>
       </article>
@@ -206,6 +270,8 @@
 
           <details class="case-detail">
             <summary>서비스 플로우 &amp; 화면 설계 상세 보기</summary>
+
+            <h4>서비스 플로우 &amp; 화면 설계</h4>
             <div class="detail-gallery">
               <img src="assets/img/project3-service-flow.jpg" alt="AICC 상담 서비스 플로우 다이어그램" />
               <img src="assets/img/project3-wireframe.jpg" alt="AICC Backoffice 메뉴/AI 브릿지 와이어프레임" />
@@ -215,6 +281,13 @@
               <li><strong>Backoffice 화면 설계</strong> — 메뉴 서비스 관리(시나리오·데이터 맵핑)와 AI 브릿지(기본/기타 프롬프트 설정, 데이터 연동 메소드, 챗봇 연동 설정) 화면을 기능 단위로 와이어프레이밍</li>
               <li><strong>요구사항 정의서(PRD)</strong> — 안내 멘트, 메뉴 시나리오, 코드 관리 등 AI 상담 업무에 필요한 요구사항을 유형·도출단계·제약사항별로 정리해 설계 방향성을 구체화</li>
             </ul>
+
+            <h4>회고</h4>
+            <blockquote class="detail-quote">
+              "AICC 서비스에 대한 서비스 플로우 분석을 통해 전체적인 흐름을 파악하며, 서비스에 대한
+              이해도를 높일 수 있었습니다. 계약 전 사전 기획 단계였지만, 복잡한 AI 상담 로직을 명확한
+              화면 설계로 구체화하는 경험을 쌓았습니다."
+            </blockquote>
           </details>
         </div>
       </article>
