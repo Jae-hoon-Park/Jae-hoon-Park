@@ -5,29 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>박재훈 | Service Planner Portfolio</title>
   <meta name="description" content="비즈니스 정합성과 운영 자동화를 설계하는 서비스 기획자, 박재훈의 포트폴리오입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header" id="siteHeader">
     <nav class="nav container">
       <a class="logo" href="#top">박재훈</a>
       <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">소개</a></li>
-        <li><a href="#career">경력</a></li>
-        <li><a href="#skills">기술 스택</a></li>
-        <li><a href="#projects">프로젝트</a></li>
-        <li><a href="#contact">연락처</a></li>
+        <li><a href="#about" data-nav="about">소개</a></li>
+        <li><a href="#career" data-nav="career">경력</a></li>
+        <li><a href="#skills" data-nav="skills">기술 스택</a></li>
+        <li><a href="#projects" data-nav="projects">프로젝트</a></li>
+        <li><a href="#contact" data-nav="contact">연락처</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="top" class="hero container">
-      <p class="eyebrow">Service Planner</p>
-      <h1>박재훈</h1>
+      <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+      <p class="eyebrow"><span class="eyebrow-dot"></span>Service Planner</p>
+      <h1 class="hero-name">박재훈</h1>
       <p class="hero-subtitle">
         데이터의 정합성과 운영의 효율성을 설계하는 기획자입니다.<br />
         아날로그 업무 프로세스를 논리적인 시스템 구조로 전환하는 일을 합니다.
@@ -36,9 +43,10 @@
         <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
         <a class="btn btn-outline" href="#contact">연락하기</a>
       </div>
+      <a class="scroll-cue" href="#about" aria-label="아래로 스크롤"><span></span></a>
     </section>
 
-    <section id="about" class="section container">
+    <section id="about" class="section container reveal">
       <h2 class="section-title">About Me</h2>
       <p class="section-text">
         저는 아날로그 방식의 복잡한 업무 프로세스를 논리적인 시스템 구조로 전환하여,
@@ -59,9 +67,9 @@
       </p>
     </section>
 
-    <section id="career" class="section container">
+    <section id="career" class="section container reveal">
       <h2 class="section-title">경력 <span class="section-subtitle">총 8년 7개월</span></h2>
-      <ul class="career-list">
+      <ul class="career-list stagger">
         <li class="career-item">
           <div class="career-head">
             <h3>엔티큐코리아(유) · BA&amp;Planner 과장</h3>
@@ -93,9 +101,9 @@
       </ul>
     </section>
 
-    <section id="skills" class="section container">
+    <section id="skills" class="section container reveal">
       <h2 class="section-title">기술 스택</h2>
-      <ul class="skills-grid">
+      <ul class="skills-grid stagger">
         <li class="skill-item">Figma</li>
         <li class="skill-item">Notion</li>
         <li class="skill-item">Jira</li>
@@ -111,10 +119,10 @@
       </ul>
     </section>
 
-    <section id="projects" class="section container">
+    <section id="projects" class="section container reveal">
       <h2 class="section-title">프로젝트</h2>
 
-      <article class="case-study">
+      <article class="case-study reveal">
         <div class="case-media">
           <img src="assets/img/project1-portal.jpg" alt="현대퓨처넷 협력사포탈 EBIZ 로그인 화면" loading="lazy" />
           <img src="assets/img/project1-tms.jpg" alt="현대퓨처넷 TMS(Target Marketing Service) 로그인 화면" loading="lazy" />
@@ -190,7 +198,7 @@
         </div>
       </article>
 
-      <article class="case-study">
+      <article class="case-study reveal">
         <div class="case-media">
           <img src="assets/img/project2-riman.jpg" alt="리만코리아 공식몰(RIMAN) 홈페이지" loading="lazy" />
         </div>
@@ -260,7 +268,7 @@
         </div>
       </article>
 
-      <article class="case-study">
+      <article class="case-study reveal">
         <div class="case-media">
           <img src="assets/img/project3-aicc.jpg" alt="AICC 서비스 플랫폼 개념도" loading="lazy" />
         </div>
@@ -305,10 +313,10 @@
       </article>
     </section>
 
-    <section id="contact" class="section container">
+    <section id="contact" class="section container reveal">
       <h2 class="section-title">연락처</h2>
       <p class="section-text">협업 제안이나 궁금한 점은 이메일로 편하게 연락해 주세요.</p>
-      <ul class="contact-list">
+      <ul class="contact-list stagger">
         <li><a href="mailto:qkrwogns1230@gmail.com">qkrwogns1230@gmail.com</a></li>
         <li><a href="https://github.com/Jae-hoon-Park" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
