@@ -158,6 +158,10 @@ a:hover {
   text-decoration: none;
 }
 
+.nav-links a.is-active {
+  font-weight: 700;
+}
+
 .nav-links a:hover::after,
 .nav-links a.is-active::after {
   transform: scaleX(1);
@@ -804,6 +808,300 @@ a:hover {
   color: var(--color-accent);
 }
 
+/* ---------- Page hero (sub-pages) ---------- */
+
+.page-hero {
+  padding: 3.5rem 1.5rem 2.5rem;
+}
+
+.page-hero .eyebrow {
+  margin-bottom: 1rem;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+.page-hero-sub {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  max-width: 40rem;
+  margin: 0;
+}
+
+/* ---------- Live / in-progress badge ---------- */
+
+.badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge-live {
+    color: #4ade80;
+  }
+}
+
+.badge-live::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ---------- Placeholder block ---------- */
+
+.placeholder-block {
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border: 1.5px dashed var(--color-border);
+  border-radius: 14px;
+  background: var(--color-bg-alt);
+}
+
+.placeholder-title {
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.placeholder-text {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.case-study.placeholder-case {
+  border-style: dashed;
+  border-width: 1.5px;
+  box-shadow: none;
+}
+
+.case-study.placeholder-case:hover {
+  box-shadow: var(--shadow-sm);
+  transform: none;
+}
+
+/* ---------- Career groups (career.html) ---------- */
+
+.career-group {
+  margin-bottom: 2rem;
+}
+
+.career-group:last-child {
+  margin-bottom: 0;
+}
+
+.career-group-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.career-group-head h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.project-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.project-history-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), border-color 0.2s ease;
+}
+
+.project-history-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.ph-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.ph-head strong {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.ph-meta {
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.project-history-item p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.project-history-item p + p {
+  margin-top: 0.4rem;
+}
+
+.ph-outcome {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ---------- Home preview grid ---------- */
+
+.home-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.preview-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+}
+
+.preview-card:hover {
+  text-decoration: none;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.preview-card-media {
+  overflow: hidden;
+  height: 160px;
+}
+
+.preview-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.preview-card:hover .preview-card-media img {
+  transform: scale(1.06);
+}
+
+.preview-card-body {
+  padding: 1.25rem 1.4rem;
+}
+
+.preview-card-tag {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.78rem;
+  margin: 0 0 0.35rem;
+}
+
+.preview-card-body h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.preview-card-body p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+}
+
+/* ---------- Link arrow (section → page CTA) ---------- */
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.link-arrow::after {
+  content: "→";
+  transition: transform 0.2s var(--ease-out);
+}
+
+.link-arrow:hover::after {
+  transform: translateX(3px);
+}
+
+/* ---------- Mini career preview (home) ---------- */
+
+.mini-career-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mini-career-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.9rem 1.1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.mini-career-item strong {
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.mini-career-item span {
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -812,6 +1110,24 @@ a:hover {
   color: var(--color-text-muted);
   font-size: 0.85rem;
   border-top: 1px solid var(--color-border);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
 }
 
 /* ---------- Responsive ---------- */
@@ -848,5 +1164,15 @@ a:hover {
 
   .case-body {
     padding: 1.4rem;
+  }
+
+  .career-group-head {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .ph-head {
+    flex-direction: column;
+    gap: 0.2rem;
   }
 }

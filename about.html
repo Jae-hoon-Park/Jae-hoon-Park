@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>소개 | 박재훈 Portfolio</title>
+  <meta name="description" content="서비스 기획자 박재훈의 소개와 기술 스택입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container">
+      <a class="logo" href="index.html">박재훈</a>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="index.html">홈</a></li>
+        <li><a href="about.html" data-page="about.html">소개</a></li>
+        <li><a href="career.html" data-page="career.html">경력기술서</a></li>
+        <li><a href="projects.html" data-page="projects.html">프로젝트</a></li>
+        <li><a href="#contact">연락처</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero container reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span>About</p>
+      <h1>소개</h1>
+      <p class="page-hero-sub">
+        데이터가 오류 없이 흐를 수 있는 체계를 설계하는 서비스 기획자, 박재훈입니다.
+      </p>
+    </section>
+
+    <section id="about" class="section container reveal">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-text">
+        저는 아날로그 방식의 복잡한 업무 프로세스를 논리적인 시스템 구조로 전환하여,
+        데이터 기반의 운영 환경을 만드는 서비스 기획자입니다.
+      </p>
+      <p class="section-text">
+        현대퓨처넷 프로젝트에서는 수기 문서와 엑셀에 의존하던 협력사 계약 및 캠페인 운영
+        프로세스를 100% 디지털 전환(DX)했습니다. 이 과정에서 제 역할은 단순한 기능 기획을
+        넘어 <em>데이터가 오류 없이 흐를 수 있는 체계</em>를 설계하는 것이었습니다. 15개
+        매체사의 상이한 신청 양식을 통합하기 위해 자유로운 입력 대신 규격화된 셀렉트
+        방식의 <strong>다이나믹 폼 빌더</strong>를 도입해, 시스템 시작 단계에서부터 데이터
+        정합성을 확보하고 정산 시 발생할 수 있는 휴먼 에러를 원천 차단했습니다.
+      </p>
+      <p class="section-text">
+        데이터 엔지니어는 아니지만, 데이터가 가치 있게 쌓이도록 비즈니스 룰을 정의하는
+        데 강점이 있습니다. 파편화된 업무 이력을 시스템 내 데이터 자산으로 바꿔온 경험을
+        바탕으로, 안정적이고 체계적으로 확장 가능한 서비스 설계를 제시합니다.
+      </p>
+      <p class="section-text">
+        현재는 서로커뮤니케이션에서 모바일 앱과 브랜드 홈페이지 기획 및 프로젝트 관리를
+        맡고 있으며, 지난 프로젝트들의 상세 이력은
+        <a href="career.html">경력기술서</a> 페이지에서 확인하실 수 있습니다.
+      </p>
+    </section>
+
+    <section id="skills" class="section container reveal">
+      <h2 class="section-title">기술 스택</h2>
+      <ul class="skills-grid stagger">
+        <li class="skill-item">Figma</li>
+        <li class="skill-item">Notion</li>
+        <li class="skill-item">Jira</li>
+        <li class="skill-item">Confluence</li>
+        <li class="skill-item">PowerPoint</li>
+        <li class="skill-item">Excel</li>
+        <li class="skill-item">Photoshop</li>
+        <li class="skill-item">Illustrator</li>
+        <li class="skill-item">Slack</li>
+        <li class="skill-item">Google Analytics</li>
+        <li class="skill-item">HTML5 / CSS3</li>
+        <li class="skill-item">와이어프레임 설계</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section container reveal">
+      <h2 class="section-title">연락처</h2>
+      <p class="section-text">협업 제안이나 궁금한 점은 이메일로 편하게 연락해 주세요.</p>
+      <ul class="contact-list stagger">
+        <li><a href="mailto:qkrwogns1230@gmail.com">qkrwogns1230@gmail.com</a></li>
+        <li><a href="https://github.com/Jae-hoon-Park" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">홈</a>
+      <a href="about.html">소개</a>
+      <a href="career.html">경력기술서</a>
+      <a href="projects.html">프로젝트</a>
+    </div>
+    <p>&copy; <span id="year"></span> Jae-hoon Park. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

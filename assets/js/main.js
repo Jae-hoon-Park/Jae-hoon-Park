@@ -15,6 +15,16 @@ navLinks.querySelectorAll("a").forEach((link) => {
   });
 });
 
+// ---------- Active nav link (current page) ----------
+const currentFile = location.pathname.split("/").pop() || "index.html";
+
+navLinks.querySelectorAll("a[data-page]").forEach((link) => {
+  const linkFile = link.getAttribute("href").split("/").pop();
+  if (linkFile === currentFile) {
+    link.classList.add("is-active");
+  }
+});
+
 // ---------- Scroll progress bar ----------
 const progressBar = document.getElementById("scrollProgress");
 
@@ -74,27 +84,3 @@ document.querySelectorAll(".stagger").forEach((group) => {
     child.style.transitionDelay = reduceMotion ? "0ms" : `${Math.min(i * 60, 480)}ms`;
   });
 });
-
-// ---------- Scrollspy nav ----------
-const sections = ["about", "career", "skills", "projects", "contact"]
-  .map((id) => document.getElementById(id))
-  .filter(Boolean);
-const navLinkMap = new Map(
-  Array.from(navLinks.querySelectorAll("a[data-nav]")).map((a) => [a.dataset.nav, a])
-);
-
-const spyObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      const link = navLinkMap.get(entry.target.id);
-      if (!link) return;
-      if (entry.isIntersecting) {
-        navLinkMap.forEach((l) => l.classList.remove("is-active"));
-        link.classList.add("is-active");
-      }
-    });
-  },
-  { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
-);
-
-sections.forEach((section) => spyObserver.observe(section));
