@@ -226,27 +226,30 @@
           <p class="case-tag">2026.01 – 2026.02 · 기획 PL(비즈니스 분석 및 아키텍처 설계)</p>
           <h3>AICC 서비스 플랫폼 — 사전 기획</h3>
           <p>
-            고객사 계약 전 내부 프로젝트로, AICC(AI Contact Center) 서비스의 비즈니스
-            프로세스를 설계하고 시장 진입 전략 수립을 위한 기능 요구사항을 정의했습니다.
+            고객사 계약 전 내부 프로젝트로, 콜봇과 챗봇을 통합한 AICC(AI Contact Center)
+            서비스의 비즈니스 프로세스를 설계하고, 고객용 상담 서비스와 운영자용 관리자
+            시스템까지 <strong>총 75개 화면(사용자 19 · 관리자 56)</strong>의 정보구조를 설계했습니다.
           </p>
           <ul class="case-points">
-            <li>서비스 플로우 분석을 통한 전체 흐름 파악 및 요구사항 정의서(PRD) 작성</li>
-            <li>안내 멘트, 데이터 맵핑, 상담 워크플로우 등 AI 상담 업무 핵심 기능 설계</li>
-            <li>복잡한 서비스 구조를 와이어프레임으로 시각화해 구현 가능성 검토</li>
+            <li><strong>AI ↔ 상담사 전환</strong> — AI가 먼저 상담하고, 운영자가 실시간 대화·고객 키워드·지식 데이터를 보며 상담에 참여(업무 전환)하는 구조 설계</li>
+            <li><strong>노코드 운영 구조</strong> — 메뉴 시나리오, 데이터 맵핑(메소드 → DB/API), 프롬프트(변수 삽입·미리보기/미리듣기)를 운영자가 직접 관리하도록 설계</li>
+            <li><strong>조건부 상담 흐름</strong> — 본인 인증·개인정보 동의를 시나리오별로 필요할 때만 노출하고, PDF·이미지·웹 뷰어로 상담 중 자료를 제공</li>
           </ul>
 
           <details class="case-detail">
-            <summary>서비스 플로우 &amp; 화면 설계 상세 보기</summary>
+            <summary>정보구조 · 서비스 플로우 &amp; 화면 설계 상세 보기</summary>
 
-            <h4>서비스 플로우 &amp; 화면 설계 (전체 보기)</h4>
+            <h4>정보구조(IA) &amp; 서비스 플로우</h4>
             <p class="detail-text">이미지를 클릭하면 원본 크기로 열립니다.</p>
             <div class="detail-gallery">
+              <a href="assets/img/project3-ia-diagram.jpg" target="_blank" rel="noopener"><img src="assets/img/project3-ia-diagram.jpg" alt="AICC 서비스 정보구조도(IA) — 사용자 19 · 관리자 56, 총 75개 화면" /></a>
               <a href="assets/img/project3-service-flow.jpg" target="_blank" rel="noopener"><img src="assets/img/project3-service-flow.jpg" alt="AICC 상담 서비스 플로우 다이어그램" /></a>
               <a href="assets/img/project3-wireframe.jpg" target="_blank" rel="noopener"><img src="assets/img/project3-wireframe.jpg" alt="AICC Backoffice 메뉴/AI 브릿지 와이어프레임" /></a>
               <a href="assets/img/project3-prd-1.jpg" target="_blank" rel="noopener"><img src="assets/img/project3-prd-1.jpg" alt="AICC 요구사항 정의서(PRD) 도큐먼트 1" /></a>
               <a href="assets/img/project3-prd-2.jpg" target="_blank" rel="noopener"><img src="assets/img/project3-prd-2.jpg" alt="AICC 요구사항 정의서(PRD) 도큐먼트 2" /></a>
             </div>
             <ul class="detail-list">
+              <li><strong>정보구조(IA)</strong> — 사용자 서비스(상담 인입·실시간 상담·햄버거 메뉴)와 관리자 시스템(1Depth 11개 메뉴)을 5Depth까지 구조화하고, 화면별 유형(페이지/팝업)과 기능 정의를 함께 문서화</li>
               <li><strong>상담 서비스 플로우</strong> — 상담 시작부터 AI 챗봇/콜봇 응답, STT·NLP·DM(대화 의도 파악) 처리, 응답 실패 반복 시 상담사 연결까지 전체 대화 흐름을 시퀀스로 설계해 예외 케이스까지 명확히 정의</li>
               <li><strong>Backoffice 화면 설계</strong> — 메뉴 서비스 관리(시나리오·데이터 맵핑)와 AI 브릿지(기본/기타 프롬프트 설정, 데이터 연동 메소드, 챗봇 연동 설정) 화면을 기능 단위로 와이어프레이밍</li>
               <li><strong>요구사항 정의서(PRD)</strong> — 안내 멘트, 메뉴 시나리오, 코드 관리 등 AI 상담 업무에 필요한 요구사항을 유형·도출단계·제약사항별로 정리해 설계 방향성을 구체화</li>
