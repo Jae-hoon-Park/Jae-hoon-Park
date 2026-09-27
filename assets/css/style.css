@@ -571,6 +571,92 @@ a:hover {
   object-position: top left;
 }
 
+/* 핵심 설계 스포트라이트 (이미지 + 설명 2단) */
+.spotlight {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.75rem 0 1.5rem;
+}
+
+.spotlight-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-bg-alt);
+}
+
+.spotlight-item:nth-child(even) .spotlight-media {
+  order: 2;
+}
+
+.spotlight-media {
+  position: relative;
+  display: block;
+  max-height: 440px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s var(--ease-out);
+}
+
+.spotlight-media:hover {
+  transform: translateY(-3px);
+}
+
+.spotlight-media::after {
+  content: "클릭해서 전체 화면 보기";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2.5rem 0 0.7rem;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #33344a;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 70%);
+}
+
+.spotlight-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.spotlight-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+}
+
+.spotlight-text h4 {
+  margin: 0 0 0.85rem;
+  font-size: 1.12rem;
+}
+
+@media (max-width: 800px) {
+  .spotlight-item {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .spotlight-item:nth-child(even) .spotlight-media {
+    order: 0;
+  }
+
+  .spotlight-media {
+    max-height: 320px;
+  }
+}
+
 .case-study:hover .case-media img {
   transform: scale(1.04);
 }

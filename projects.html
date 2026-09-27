@@ -108,48 +108,93 @@
       <article id="project-current-mall" class="case-study reveal">
         <div class="case-media case-media--top">
           <img src="assets/img/current2-simulator.jpg" width="1400" height="752" alt="3D 시뮬레이터 — 사이즈 입력 후 부품 목록(BOM)과 예상 금액 자동 산출" loading="lazy" />
-          <img src="assets/img/current2-admin-pipe-price.jpg" width="1400" height="1080" alt="관리자 — 파이프 길이 단가 정책 설정" loading="lazy" />
+          <img src="assets/img/current2-order-history.jpg" width="1400" height="1271" alt="사용자 — 주문내역/배송조회 (택배·화물 송장 분리 조회)" loading="lazy" />
         </div>
         <div class="case-body">
           <p class="case-tag">2026.03 – 재직중 · 서로커뮤니케이션 · 기획팀 과장 (기획 · PM)</p>
           <h3>B2B 산업용 파이프 구조물 쇼핑몰 구축 (국문 · 영문 + 관리자)</h3>
           <p>
             조립식 파이프·부속으로 행거, 선반·진열대, 천막, 골프연습장 같은 구조물을 만드는 고객을 위한
-            B2B 쇼핑몰을 기획하고 있습니다. 규격·색상·길이 조합이 수백 가지인 상품을 "고르기 쉽고, 견적 내기 쉽게"
-            만드는 것이 핵심 과제로, 국문 쇼핑몰(약 85개 화면)과 해외 바이어용 영문 견적 요청(RFQ) 사이트,
-            운영자용 관리자(약 60개 화면)를 함께 설계했습니다.
+            B2B 쇼핑몰을 기획하고 있습니다. 규격·색상·길이 조합이 수백 가지인 상품을 운영자는 "등록·관리하기 쉽게",
+            고객은 "고르고 주문하기 쉽게" 만드는 것이 핵심 과제로, 국문 쇼핑몰(약 85개 화면)과 해외 바이어용
+            영문 견적 요청(RFQ) 사이트, 운영자용 관리자(약 60개 화면)를 함께 설계했습니다.
           </p>
           <ul class="case-points">
-            <li><strong>3D 시뮬레이터 견적</strong> — 구조물 프리셋을 고르고 폭·깊이·높이만 입력하면 조립 규칙에 따라 부속 수량과 파이프 길이(BOM), 예상 금액이 자동 계산되고 견적서 저장·장바구니 담기로 바로 이어지는 흐름</li>
-            <li><strong>파이프 절단 주문 · 길이 단가 정책</strong> — 규격 6종 × 컬러 5종에 원하는 길이를 입력하는 절단 주문과, 관리자가 규격×컬러별 cm 단가·10cm 올림 과금 단위·화물 배송 전환 기준을 직접 설정하는 가격 정책 설계</li>
-            <li><strong>B2B 거래 구조</strong> — 상담 후 발행한 맞춤 견적서를 로그인 없이 링크로 결제(카드/무통장, 세금계산서), 사업자 회원 승인과 등급별 할인, 해외 바이어용 영문 RFQ(가격 비노출) 접수 및 리드 관리</li>
+            <li><strong>상품 등록 구조</strong> — 상품과 판매 단위인 품목(SKU)을 분리하고, 규격×색상 매트릭스로 가격·재고·ERP 코드를 관리하는 구조 설계. 1회 최대 5,000행 엑셀 일괄 등록과 행별 오류 검증까지 정의</li>
+            <li><strong>주문 상세 · 배송 처리</strong> — 한 주문을 택배·화물 배송 그룹으로 나눠 송장과 상태를 따로 관리하고, 결제·증빙(무통장 입금 확인, 세금계산서)을 한 화면에서 처리</li>
+            <li><strong>견적 · 가격 정책</strong> — 사이즈만 입력하면 부품 수량과 금액이 계산되는 3D 시뮬레이터, 파이프 cm 단가·10cm 올림 과금 정책, 로그인 없이 결제하는 맞춤 견적서</li>
+            <li><strong>해외 · B2B 거래</strong> — 사업자 회원 승인과 등급별 할인, 가격을 노출하지 않는 영문 RFQ 접수 및 리드 관리</li>
           </ul>
+
+          <div class="spotlight">
+            <div class="spotlight-item">
+              <a class="spotlight-media" href="assets/img/current2-admin-product.jpg" target="_blank" rel="noopener">
+                <img src="assets/img/current2-admin-product.jpg" width="1400" height="1456" alt="관리자 — 상품 등록/수정 화면" loading="lazy" />
+              </a>
+              <div class="spotlight-text">
+                <p class="spotlight-label">핵심 설계 01</p>
+                <h4>상품 등록 — 상품 · 품목(SKU) 분리 구조</h4>
+                <ul class="detail-list">
+                  <li><strong>상품 ↔ 품목 분리</strong> — 상품("무용접 파이프 클램프")은 규격·색상 없이 등록하고, 실제 판매 단위인 품목(엘보·T클램프·유니온 등)을 불러와 구성과 노출 순서만 지정</li>
+                  <li><strong>규격 × 색상 매트릭스</strong> — 품목마다 15A~50A × 실버·블랙 조합별 가격·재고·ERP 코드를 한 표에서 입력. 가격을 비운 조합은 판매하지 않는 것으로 처리해 상품 상세 선택지가 자동으로 만들어짐</li>
+                  <li><strong>변경 영향 범위 노출</strong> — 한 품목이 상품·솔루션 페이지·시공사례 중 어디에 쓰이는지 "사용 중인 곳"으로 보여주고, 가격·재고 수정이 모든 곳에 함께 반영됨을 안내 (사용 중이면 삭제 불가)</li>
+                  <li><strong>엑셀 일괄 등록</strong> — 열 규칙(규격 6종, ERP 코드 중복, 미등록 카테고리, 0원 이하)을 업로드 시점에 검증해 정상 행만 반영하고, 오류 행은 행 번호·사유와 함께 목록화</li>
+                </ul>
+              </div>
+            </div>
+            <div class="spotlight-item">
+              <a class="spotlight-media" href="assets/img/current2-admin-order-detail.jpg" target="_blank" rel="noopener">
+                <img src="assets/img/current2-admin-order-detail.jpg" width="1400" height="1391" alt="관리자 — 주문 상세 화면" loading="lazy" />
+              </a>
+              <div class="spotlight-text">
+                <p class="spotlight-label">핵심 설계 02</p>
+                <h4>주문 상세 — 택배 · 화물 배송 그룹 분리</h4>
+                <ul class="detail-list">
+                  <li><strong>배송 그룹 자동 분리</strong> — 품목 등록 시 지정한 배송 방식(부속은 택배, 긴 파이프·선반 본체는 화물)에 따라 한 주문이 배송 그룹별로 나뉘고, 그룹마다 택배사·송장번호·배송 상태를 따로 관리</li>
+                  <li><strong>상태 자동 전환</strong> — 두 그룹이 모두 배송완료가 되면 주문 상태가 자동으로 배송완료로 바뀌고, 송장 조회가 안 되는 화물사는 수동 완료 처리 버튼 제공</li>
+                  <li><strong>결제 · 증빙</strong> — 무통장 입금 확인 시 결제완료로 전환, 세금계산서(사업자 정보·발행 이메일)와 현금영수증 발행 여부를 주문 단위로 관리. 비회원 주문은 주문번호 + 비밀번호로 본인 확인</li>
+                  <li><strong>고객 주문내역 연계</strong> — 고객 화면에서도 택배/화물 송장을 따로 조회하고, 입금대기~반품완료 12개 상태값별로 주문취소·교환/반품(배송완료 후 D+14)·리뷰 버튼 노출 규칙을 정의</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <p class="case-result">
             현재 진행 중인 비공개 프로젝트로, 브랜드명·로고·연락처 등 고객사를 식별할 수 있는 정보는
-            가림 처리했습니다. 화면은 직접 작성한 화면 설계서(와이어프레임)입니다.
+            가림 처리했습니다. 화면은 직접 작성한 화면 설계서(와이어프레임)이며, 이미지를 클릭하면 원본 크기로 열립니다.
           </p>
 
           <details class="case-detail">
-            <summary>프로젝트 상세 보기 (사용자 화면 · 관리자 화면 · 기획 범위)</summary>
+            <summary>프로젝트 상세 보기 (상품 · 주문 화면 · 견적 · 관리자 · 기획 범위)</summary>
 
-            <h4>사용자 화면 — 견적 · 주문</h4>
-            <p class="detail-text">
-              직접 작성한 화면 설계서입니다. 오른쪽 설명 영역에 화면 목적, 계산 규칙, 예외 처리를 번호별로 정리했습니다.
-              이미지를 클릭하면 원본 크기로 열립니다.
-            </p>
+            <h4>상품 · 주문 화면 더 보기</h4>
+            <div class="detail-gallery">
+              <a href="assets/img/current2-admin-item.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-item.jpg" width="1400" height="1178" alt="관리자 — 품목 등록/수정 (규격×색상 가격·재고·ERP)" /></a>
+              <a href="assets/img/current2-admin-bulk.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-bulk.jpg" width="1400" height="1425" alt="관리자 — 상품 엑셀 일괄 등록/수정" /></a>
+              <a href="assets/img/current2-quickview.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-quickview.jpg" width="1400" height="1075" alt="사용자 — 품번 퀵뷰 모달" /></a>
+              <a href="assets/img/current2-admin-order-list.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-order-list.jpg" width="1400" height="544" alt="관리자 — 주문 목록" /></a>
+              <a href="assets/img/current2-order-history.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-order-history.jpg" width="1400" height="1271" alt="사용자 — 주문내역/배송조회" /></a>
+            </div>
+            <ul class="detail-list">
+              <li><strong>품목 등록/수정</strong> — 품번은 등록 후 변경 불가(품번 정보 페이지 주소로 사용), 국문·영문 품목명을 함께 받아 영문 RFQ에 자동 활용</li>
+              <li><strong>엑셀 일괄 등록</strong> — 신규 등록/기존 수정 모드, 전체·정상·오류 행 수 요약, 최근 업로드 이력(처리 결과·처리자) 관리</li>
+              <li><strong>품번 퀵뷰</strong> — 부속 대량 주문 표에서 품번을 누르면 개요·3D 형상·스펙 탭과 규격·색상 선택, 수량 담기를 모달 하나로 처리</li>
+              <li><strong>주문 목록</strong> — 상태 탭(결제완료·배송준비중·배송중·배송완료·클레임), 배송 그룹 필터, ERP 발주용 엑셀 내려받기, 운송장 일괄 등록</li>
+            </ul>
+
+            <h4>견적 · 주문 흐름</h4>
             <div class="detail-gallery">
               <a href="assets/img/current2-simulator.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-simulator.jpg" width="1400" height="752" alt="3D 시뮬레이터 화면 설계서" /></a>
               <a href="assets/img/current2-quote.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-quote.jpg" width="1015" height="1210" alt="맞춤 견적서 결제 페이지 화면 설계서" /></a>
               <a href="assets/img/current2-rfq.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-rfq.jpg" width="1304" height="1478" alt="영문 RFQ(견적 요청) 화면" /></a>
             </div>
             <ul class="detail-list">
-              <li><strong>3D 시뮬레이터</strong> — 입력한 사이즈로 부속·파이프 수량을 실시간 재계산하고, 관리자가 정한 한 변 최대 치수를 넘으면 생성을 막고 안내 메시지를 노출. 결과는 견적서 보기/저장(PDF·문의 첨부) 또는 BOM 전체를 장바구니에 담는 두 갈래로 처리</li>
+              <li><strong>3D 시뮬레이터</strong> — 입력한 사이즈로 부속·파이프 수량을 실시간 재계산하고, 관리자가 정한 한 변 최대 치수를 넘으면 생성을 막고 안내 메시지를 노출. 결과는 견적서 보기/저장 또는 BOM 전체를 장바구니에 담는 두 갈래로 처리</li>
               <li><strong>맞춤 견적서</strong> — 유선 상담으로 확정된 구성을 별도 검색 없이 바로 결제. 견적 품목·절단 가공·택배/화물 배송비를 한 번에 보여주고, 유효기간이 지나면 결제를 막아 재발급을 요청하도록 설계</li>
               <li><strong>영문 RFQ</strong> — 해외 바이어는 가격 대신 Quote List에 품목을 담아 견적을 요청. 담은 품목이 요청서에 자동으로 채워지고, 인코텀즈·도착 국가 등 수출 견적에 필요한 항목을 필수로 받도록 구성</li>
-              <li><strong>대량 주문 · 상품 상세</strong> — 부속은 규격·색상별 품번을 한 화면에 나열해 수량만 입력하는 대량 주문 표로, 상품 상세는 구매 영역 고정·선택 바·품번 빠른 보기 모달로 탐색 부담을 줄임</li>
             </ul>
 
-            <h4>관리자(백오피스) 화면</h4>
+            <h4>관리자 — 운영 · 정책 설정</h4>
             <div class="detail-gallery">
               <a href="assets/img/current2-admin-dashboard.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-dashboard.jpg" width="1400" height="564" alt="관리자 — 대시보드" /></a>
               <a href="assets/img/current2-admin-quote.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-quote.jpg" width="1400" height="749" alt="관리자 — 맞춤 견적서 발행" /></a>
@@ -165,9 +210,9 @@
 
             <h4>기획 범위</h4>
             <ul class="detail-list">
-              <li><strong>사용자(국문)</strong> — 메인·메가메뉴, 상품 목록/상세, 3D 시뮬레이터, 부속 대량 주문, 파이프 절단 주문, 장바구니·주문/결제, 맞춤 견적서, 사업자 회원가입·등급, 마이페이지, 고객지원</li>
+              <li><strong>사용자(국문)</strong> — 메인·메가메뉴, 상품 목록/상세, 3D 시뮬레이터, 부속 대량 주문, 파이프 절단 주문, 장바구니·주문/결제, 맞춤 견적서, 사업자 회원가입·등급, 마이페이지(주문내역·배송조회·교환/반품), 고객지원</li>
               <li><strong>사용자(영문)</strong> — 가격 비노출 카탈로그, Quote List, RFQ 요청, 이메일 입력 후 자료 다운로드(리드 수집)</li>
-              <li><strong>관리자</strong> — 상품·SKU 대량 등록, 주문 상태 워크플로우, 클레임, 회원·등급, 메가메뉴·솔루션 페이지 블록 편집(CMS), 알림 템플릿, 통계, RFQ·리드 관리</li>
+              <li><strong>관리자</strong> — 상품·품목·카테고리, 엑셀 일괄 등록, 주문·배송·클레임, 세금계산서, 회원·등급, 메가메뉴·솔루션 페이지 블록 편집(CMS), 알림 템플릿, 통계, RFQ·리드 관리</li>
               <li><strong>산출물</strong> — 요구사항 정의(기능 ID 기반), 사이트맵, 사용자·관리자 화면 설계서</li>
             </ul>
           </details>
