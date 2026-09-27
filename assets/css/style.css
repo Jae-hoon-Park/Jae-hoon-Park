@@ -567,6 +567,10 @@ a:hover {
   transition: transform 0.5s var(--ease-out);
 }
 
+.case-media--top img {
+  object-position: top left;
+}
+
 .case-study:hover .case-media img {
   transform: scale(1.04);
 }
@@ -1025,6 +1029,14 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-bottom: 1.75rem;
+}
+
+/* 진행중 2개는 넓게, 완료 3개는 아래 줄로 */
+@media (min-width: 900px) {
+  .home-preview-grid { grid-template-columns: repeat(6, 1fr); }
+  .home-preview-grid .preview-card { grid-column: span 2; }
+  .home-preview-grid .preview-card:nth-child(-n + 2) { grid-column: span 3; }
+  .home-preview-grid .preview-card:nth-child(-n + 2) .preview-card-media { height: 220px; }
 }
 
 .preview-card {
