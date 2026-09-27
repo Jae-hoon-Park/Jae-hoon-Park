@@ -165,52 +165,90 @@
           </p>
 
           <details class="case-detail">
-            <summary>프로젝트 상세 보기 (상품 · 주문 화면 · 견적 · 관리자 · 기획 범위)</summary>
+            <summary>프로젝트 상세 보기 (사용자 화면 · 관리자 화면 · 기획 범위)</summary>
 
-            <h4>상품 · 주문 화면 더 보기</h4>
-            <div class="detail-gallery">
-              <a href="assets/img/current2-admin-item.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-item.jpg" width="1400" height="1178" alt="관리자 — 품목 등록/수정 (규격×색상 가격·재고·ERP)" /></a>
-              <a href="assets/img/current2-admin-bulk.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-bulk.jpg" width="1400" height="1425" alt="관리자 — 상품 엑셀 일괄 등록/수정" /></a>
-              <a href="assets/img/current2-quickview.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-quickview.jpg" width="1400" height="1075" alt="사용자 — 품번 퀵뷰 모달" /></a>
-              <a href="assets/img/current2-admin-order-list.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-order-list.jpg" width="1400" height="544" alt="관리자 — 주문 목록" /></a>
-              <a href="assets/img/current2-order-history.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-order-history.jpg" width="1400" height="1271" alt="사용자 — 주문내역/배송조회" /></a>
+            <h4>사용자 화면</h4>
+            <p class="detail-text">직접 작성한 화면 설계서입니다. 썸네일은 화면의 핵심 영역이며, 클릭하면 설명 영역을 포함한 전체 화면이 열립니다.</p>
+            <div class="screen-grid">
+              <a class="screen-tile" href="assets/img/current2-pdp.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-pdp-thumb.jpg" width="720" height="540" alt="사용자 — 상품 상세 (규격 선택·품목 담기·파이프 절단)" loading="lazy" /></span>
+                <span class="screen-cap">상품 상세</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-order-form.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-order-form-thumb.jpg" width="720" height="540" alt="사용자 — 주문서 작성 (배송 그룹·회원/비회원 주문)" loading="lazy" /></span>
+                <span class="screen-cap">주문서 작성</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-simulator.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-simulator-thumb.jpg" width="720" height="540" alt="사용자 — 3D 시뮬레이터 견적" loading="lazy" /></span>
+                <span class="screen-cap">3D 시뮬레이터</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-quote.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-quote-thumb.jpg" width="720" height="540" alt="사용자 — 맞춤 견적서 결제 페이지" loading="lazy" /></span>
+                <span class="screen-cap">맞춤 견적서 결제</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-order-history.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-order-history-thumb.jpg" width="720" height="540" alt="사용자 — 주문내역/배송조회" loading="lazy" /></span>
+                <span class="screen-cap">주문내역 · 배송조회</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-quickview.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-quickview-thumb.jpg" width="720" height="540" alt="사용자 — 품번 퀵뷰 모달" loading="lazy" /></span>
+                <span class="screen-cap">품번 퀵뷰</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-rfq.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-rfq-thumb.jpg" width="720" height="540" alt="영문 사이트 — 견적 요청(RFQ)" loading="lazy" /></span>
+                <span class="screen-cap">영문 RFQ</span>
+              </a>
             </div>
             <ul class="detail-list">
-              <li><strong>품목 등록/수정</strong> — 품번은 등록 후 변경 불가(품번 정보 페이지 주소로 사용), 국문·영문 품목명을 함께 받아 영문 RFQ에 자동 활용</li>
-              <li><strong>엑셀 일괄 등록</strong> — 신규 등록/기존 수정 모드, 전체·정상·오류 행 수 요약, 최근 업로드 이력(처리 결과·처리자) 관리</li>
-              <li><strong>품번 퀵뷰</strong> — 부속 대량 주문 표에서 품번을 누르면 개요·3D 형상·스펙 탭과 규격·색상 선택, 수량 담기를 모달 하나로 처리</li>
+              <li><strong>상품 상세</strong> — 상단 규격 선택 바(15A~50A)와 색상을 바꾸면 구성 품목 카드의 가격·품번이 한 번에 바뀌고, 품목별 수량을 담으면 우측 고정 "주문 요약"에 누적. 같은 화면에서 파이프 규격과 길이(0.1cm 단위)를 입력해 절단 파이프를 추가하고, 300cm 이상은 화물 수령 안내·입력값 검증 메시지를 노출</li>
+              <li><strong>주문서 작성</strong> — 장바구니 → 주문서 → 결제 → 완료 4단계 스텝. 회원/비회원 주문 전환(비회원은 주문 조회 비밀번호 설정), 기본 배송지 선택/새 배송지 입력, 택배(선불)·화물(착불) 배송 그룹을 결제 전에 미리 나눠 보여주고 우측 주문 요약에 배송비를 구분 표기</li>
+              <li><strong>3D 시뮬레이터</strong> — 입력한 사이즈로 부속·파이프 수량을 실시간 재계산하고, 관리자가 정한 한 변 최대 치수를 넘으면 생성을 막고 안내. 결과는 견적서 보기/저장 또는 BOM 전체 장바구니 담기로 연결</li>
+              <li><strong>맞춤 견적서 결제</strong> — 유선 상담으로 확정된 구성을 로그인 없이 링크로 바로 결제(토스페이먼츠/무통장, 세금계산서). 유효기간이 지나면 결제를 막고 재발급 요청 유도</li>
+              <li><strong>주문내역 · 품번 퀵뷰</strong> — 택배/화물 송장을 따로 조회하고 상태값별 버튼 노출 규칙을 정의. 대량 주문 표의 품번을 누르면 개요·3D 형상·스펙과 규격·색상 선택, 수량 담기를 모달 하나로 처리</li>
+              <li><strong>영문 RFQ</strong> — 해외 바이어는 가격 대신 Quote List에 품목을 담아 견적 요청. 담은 품목이 자동으로 채워지고 인코텀즈·도착 국가 등 수출 견적 필수 항목을 수집</li>
+            </ul>
+
+            <h4>관리자 화면</h4>
+            <div class="screen-grid">
+              <a class="screen-tile" href="assets/img/current2-admin-item.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-admin-item-thumb.jpg" width="720" height="540" alt="관리자 — 품목 등록/수정" loading="lazy" /></span>
+                <span class="screen-cap">품목 등록/수정</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-admin-bulk.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-admin-bulk-thumb.jpg" width="720" height="540" alt="관리자 — 상품 엑셀 일괄 등록/수정" loading="lazy" /></span>
+                <span class="screen-cap">엑셀 일괄 등록</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-admin-order-list.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-admin-order-list-thumb.jpg" width="720" height="540" alt="관리자 — 주문 목록" loading="lazy" /></span>
+                <span class="screen-cap">주문 목록</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-admin-dashboard.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-admin-dashboard-thumb.jpg" width="720" height="540" alt="관리자 — 대시보드" loading="lazy" /></span>
+                <span class="screen-cap">대시보드</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-admin-quote.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-admin-quote-thumb.jpg" width="720" height="540" alt="관리자 — 맞춤 견적서 발행" loading="lazy" /></span>
+                <span class="screen-cap">맞춤 견적서 발행</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-admin-pipe-price.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-admin-pipe-price-thumb.jpg" width="720" height="540" alt="관리자 — 파이프 길이 단가 정책" loading="lazy" /></span>
+                <span class="screen-cap">파이프 길이 단가 정책</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-admin-3d-rule.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-admin-3d-rule-thumb.jpg" width="720" height="540" alt="관리자 — 3D 조립규칙 설정" loading="lazy" /></span>
+                <span class="screen-cap">3D 조립규칙</span>
+              </a>
+            </div>
+            <ul class="detail-list">
+              <li><strong>품목 · 엑셀 일괄 등록</strong> — 품번은 등록 후 변경 불가(품번 정보 페이지 주소로 사용), 국문·영문 품목명을 함께 받아 영문 RFQ에 자동 활용. 엑셀은 신규/수정 모드, 전체·정상·오류 행 요약, 업로드 이력 관리</li>
               <li><strong>주문 목록</strong> — 상태 탭(결제완료·배송준비중·배송중·배송완료·클레임), 배송 그룹 필터, ERP 발주용 엑셀 내려받기, 운송장 일괄 등록</li>
-            </ul>
-
-            <h4>견적 · 주문 흐름</h4>
-            <div class="detail-gallery">
-              <a href="assets/img/current2-simulator.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-simulator.jpg" width="1400" height="752" alt="3D 시뮬레이터 화면 설계서" /></a>
-              <a href="assets/img/current2-quote.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-quote.jpg" width="1015" height="1210" alt="맞춤 견적서 결제 페이지 화면 설계서" /></a>
-              <a href="assets/img/current2-rfq.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-rfq.jpg" width="1304" height="1478" alt="영문 RFQ(견적 요청) 화면" /></a>
-            </div>
-            <ul class="detail-list">
-              <li><strong>3D 시뮬레이터</strong> — 입력한 사이즈로 부속·파이프 수량을 실시간 재계산하고, 관리자가 정한 한 변 최대 치수를 넘으면 생성을 막고 안내 메시지를 노출. 결과는 견적서 보기/저장 또는 BOM 전체를 장바구니에 담는 두 갈래로 처리</li>
-              <li><strong>맞춤 견적서</strong> — 유선 상담으로 확정된 구성을 별도 검색 없이 바로 결제. 견적 품목·절단 가공·택배/화물 배송비를 한 번에 보여주고, 유효기간이 지나면 결제를 막아 재발급을 요청하도록 설계</li>
-              <li><strong>영문 RFQ</strong> — 해외 바이어는 가격 대신 Quote List에 품목을 담아 견적을 요청. 담은 품목이 요청서에 자동으로 채워지고, 인코텀즈·도착 국가 등 수출 견적에 필요한 항목을 필수로 받도록 구성</li>
-            </ul>
-
-            <h4>관리자 — 운영 · 정책 설정</h4>
-            <div class="detail-gallery">
-              <a href="assets/img/current2-admin-dashboard.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-dashboard.jpg" width="1400" height="564" alt="관리자 — 대시보드" /></a>
-              <a href="assets/img/current2-admin-quote.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-quote.jpg" width="1400" height="749" alt="관리자 — 맞춤 견적서 발행" /></a>
-              <a href="assets/img/current2-admin-pipe-price.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-pipe-price.jpg" width="1400" height="1080" alt="관리자 — 파이프 길이 단가 정책" /></a>
-              <a href="assets/img/current2-admin-3d-rule.jpg" target="_blank" rel="noopener"><img src="assets/img/current2-admin-3d-rule.jpg" width="1400" height="525" alt="관리자 — 3D 조립규칙 설정" /></a>
-            </div>
-            <ul class="detail-list">
-              <li><strong>대시보드</strong> — 오늘 주문·결제 금액·배송 준비·미답변 문의·재고 부족 SKU·영문 RFQ 신규 건을 한눈에 보고, 처리 대기 업무로 바로 이동</li>
-              <li><strong>맞춤 견적서 발행</strong> — 품번 검색으로 품목을 추가하고 유효기간을 정해 발행하면, 결제 링크가 고객 이메일로 발송되도록 설계</li>
-              <li><strong>파이프 길이 단가 정책</strong> — 판매 길이 범위, 과금 단위(예: 100.1cm 입력 → 110cm로 계산), 화물 배송 전환 기준(300cm 초과), 규격×컬러별 cm 단가를 운영자가 코드 수정 없이 변경</li>
-              <li><strong>3D 조립규칙</strong> — 구조물 유형별 최대 치수, 중간 기둥 추가 기준, 부속 수량 계산식을 관리자에서 정의해 시뮬레이터 계산 로직과 연결</li>
+              <li><strong>대시보드 · 맞춤 견적서 발행</strong> — 오늘 주문·결제 금액·미답변 문의·재고 부족 SKU·영문 RFQ 신규 건을 한눈에 확인. 품번 검색으로 견적 품목을 구성해 발행하면 결제 링크가 고객 이메일로 발송</li>
+              <li><strong>가격 · 조립 정책</strong> — 파이프 판매 길이 범위, 과금 단위(100.1cm → 110cm), 화물 전환 기준(300cm 초과), 규격×컬러별 cm 단가와 구조물별 최대 치수·부속 수량 계산식을 코드 수정 없이 운영자가 변경</li>
             </ul>
 
             <h4>기획 범위</h4>
             <ul class="detail-list">
-              <li><strong>사용자(국문)</strong> — 메인·메가메뉴, 상품 목록/상세, 3D 시뮬레이터, 부속 대량 주문, 파이프 절단 주문, 장바구니·주문/결제, 맞춤 견적서, 사업자 회원가입·등급, 마이페이지(주문내역·배송조회·교환/반품), 고객지원</li>
+              <li><strong>사용자(국문)</strong> — 메인·메가메뉴, 상품 목록/상세, 3D 시뮬레이터, 부속 대량 주문, 파이프 절단 주문, 장바구니·주문서·결제, 맞춤 견적서, 사업자 회원가입·등급, 마이페이지(주문내역·배송조회·교환/반품), 고객지원</li>
               <li><strong>사용자(영문)</strong> — 가격 비노출 카탈로그, Quote List, RFQ 요청, 이메일 입력 후 자료 다운로드(리드 수집)</li>
               <li><strong>관리자</strong> — 상품·품목·카테고리, 엑셀 일괄 등록, 주문·배송·클레임, 세금계산서, 회원·등급, 메가메뉴·솔루션 페이지 블록 편집(CMS), 알림 템플릿, 통계, RFQ·리드 관리</li>
               <li><strong>산출물</strong> — 요구사항 정의(기능 ID 기반), 사이트맵, 사용자·관리자 화면 설계서</li>
