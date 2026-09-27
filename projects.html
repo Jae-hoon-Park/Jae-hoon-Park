@@ -107,8 +107,8 @@
 
       <article id="project-current-mall" class="case-study reveal">
         <div class="case-media case-media--top">
-          <img src="assets/img/current2-simulator.jpg" width="1400" height="752" alt="3D 시뮬레이터 — 사이즈 입력 후 부품 목록(BOM)과 예상 금액 자동 산출" loading="lazy" />
-          <img src="assets/img/current2-order-history.jpg" width="1400" height="1271" alt="사용자 — 주문내역/배송조회 (택배·화물 송장 분리 조회)" loading="lazy" />
+          <img src="assets/img/current2-simulator.jpg" width="1304" height="930" alt="3D 시뮬레이터 — 사이즈 입력 후 부품 목록(BOM)과 예상 금액 자동 산출" loading="lazy" />
+          <img src="assets/img/current2-cart.jpg" width="1304" height="740" alt="사용자 — 장바구니 (택배·화물 배송 그룹)" loading="lazy" />
         </div>
         <div class="case-body">
           <p class="case-tag">2026.03 – 재직중 · 서로커뮤니케이션 · 기획팀 과장 (기획 · PM)</p>
@@ -168,11 +168,15 @@
             <summary>프로젝트 상세 보기 (사용자 화면 · 관리자 화면 · 기획 범위)</summary>
 
             <h4>사용자 화면</h4>
-            <p class="detail-text">직접 작성한 화면 설계서입니다. 썸네일은 화면의 핵심 영역이며, 클릭하면 설명 영역을 포함한 전체 화면이 열립니다.</p>
+            <p class="detail-text">직접 작성한 화면 설계서의 와이어프레임 영역입니다. 썸네일은 화면의 핵심 영역이며, 클릭하면 전체 화면이 열립니다.</p>
             <div class="screen-grid">
               <a class="screen-tile" href="assets/img/current2-pdp.jpg" target="_blank" rel="noopener">
                 <span class="screen-thumb"><img src="assets/img/current2-pdp-thumb.jpg" width="720" height="540" alt="사용자 — 상품 상세 (규격 선택·품목 담기·파이프 절단)" loading="lazy" /></span>
                 <span class="screen-cap">상품 상세</span>
+              </a>
+              <a class="screen-tile" href="assets/img/current2-cart.jpg" target="_blank" rel="noopener">
+                <span class="screen-thumb"><img src="assets/img/current2-cart-thumb.jpg" width="720" height="540" alt="사용자 — 장바구니 (택배·화물 배송 그룹)" loading="lazy" /></span>
+                <span class="screen-cap">장바구니</span>
               </a>
               <a class="screen-tile" href="assets/img/current2-order-form.jpg" target="_blank" rel="noopener">
                 <span class="screen-thumb"><img src="assets/img/current2-order-form-thumb.jpg" width="720" height="540" alt="사용자 — 주문서 작성 (배송 그룹·회원/비회원 주문)" loading="lazy" /></span>
@@ -185,10 +189,6 @@
               <a class="screen-tile" href="assets/img/current2-quote.jpg" target="_blank" rel="noopener">
                 <span class="screen-thumb"><img src="assets/img/current2-quote-thumb.jpg" width="720" height="540" alt="사용자 — 맞춤 견적서 결제 페이지" loading="lazy" /></span>
                 <span class="screen-cap">맞춤 견적서 결제</span>
-              </a>
-              <a class="screen-tile" href="assets/img/current2-order-history.jpg" target="_blank" rel="noopener">
-                <span class="screen-thumb"><img src="assets/img/current2-order-history-thumb.jpg" width="720" height="540" alt="사용자 — 주문내역/배송조회" loading="lazy" /></span>
-                <span class="screen-cap">주문내역 · 배송조회</span>
               </a>
               <a class="screen-tile" href="assets/img/current2-quickview.jpg" target="_blank" rel="noopener">
                 <span class="screen-thumb"><img src="assets/img/current2-quickview-thumb.jpg" width="720" height="540" alt="사용자 — 품번 퀵뷰 모달" loading="lazy" /></span>
@@ -204,7 +204,7 @@
               <li><strong>주문서 작성</strong> — 장바구니 → 주문서 → 결제 → 완료 4단계 스텝. 회원/비회원 주문 전환(비회원은 주문 조회 비밀번호 설정), 기본 배송지 선택/새 배송지 입력, 택배(선불)·화물(착불) 배송 그룹을 결제 전에 미리 나눠 보여주고 우측 주문 요약에 배송비를 구분 표기</li>
               <li><strong>3D 시뮬레이터</strong> — 입력한 사이즈로 부속·파이프 수량을 실시간 재계산하고, 관리자가 정한 한 변 최대 치수를 넘으면 생성을 막고 안내. 결과는 견적서 보기/저장 또는 BOM 전체 장바구니 담기로 연결</li>
               <li><strong>맞춤 견적서 결제</strong> — 유선 상담으로 확정된 구성을 로그인 없이 링크로 바로 결제(토스페이먼츠/무통장, 세금계산서). 유효기간이 지나면 결제를 막고 재발급 요청 유도</li>
-              <li><strong>주문내역 · 품번 퀵뷰</strong> — 택배/화물 송장을 따로 조회하고 상태값별 버튼 노출 규칙을 정의. 대량 주문 표의 품번을 누르면 개요·3D 형상·스펙과 규격·색상 선택, 수량 담기를 모달 하나로 처리</li>
+              <li><strong>장바구니 · 품번 퀵뷰</strong> — 담은 상품을 택배(선불)·화물(착불) 배송 그룹으로 나눠 보여주고, 파이프는 0.1cm 단위로 길이를 조정. 주문 요약에서 택배비와 화물 착불을 구분 표기. 대량 주문 표의 품번을 누르면 개요·3D 형상·스펙과 규격·색상 선택, 수량 담기를 모달 하나로 처리</li>
               <li><strong>영문 RFQ</strong> — 해외 바이어는 가격 대신 Quote List에 품목을 담아 견적 요청. 담은 품목이 자동으로 채워지고 인코텀즈·도착 국가 등 수출 견적 필수 항목을 수집</li>
             </ul>
 
