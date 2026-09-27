@@ -683,6 +683,7 @@ a:hover {
 
 .detail-gallery img {
   width: 100%;
+  height: auto;
   border: 1px solid var(--color-border);
   display: block;
   transition: transform 0.4s var(--ease-out);
@@ -690,6 +691,41 @@ a:hover {
 
 .detail-gallery a:hover img {
   transform: scale(1.03);
+}
+
+.phone-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--color-bg-alt);
+}
+
+.phone-strip img,
+.phone-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background: #fff;
+}
+
+.phone-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.phone-gallery a {
+  display: block;
+  transition: transform 0.25s var(--ease-out);
+}
+
+.phone-gallery a:hover {
+  transform: translateY(-3px);
 }
 
 .detail-list {
@@ -986,7 +1022,7 @@ a:hover {
 
 .home-preview-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-bottom: 1.75rem;
 }
@@ -1174,5 +1210,26 @@ a:hover {
   .ph-head {
     flex-direction: column;
     gap: 0.2rem;
+  }
+
+  .ph-meta,
+  .career-period,
+  .mini-career-item span {
+    white-space: normal;
+  }
+
+  .ph-head strong,
+  .career-head h3,
+  .mini-career-item strong {
+    overflow-wrap: anywhere;
+  }
+
+  .phone-strip {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+
+  .phone-strip img:nth-child(n + 3) {
+    display: none;
   }
 }
