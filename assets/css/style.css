@@ -619,10 +619,31 @@ a:hover {
   color: var(--color-text);
 }
 
+.screen-grid--three {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.screen-grid--wide {
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+
+.screen-grid--wide .screen-thumb {
+  aspect-ratio: 16 / 9;
+}
+
+.screen-grid--wide .screen-thumb img {
+  object-position: center;
+}
+
 @media (max-width: 640px) {
-  .screen-grid {
+  .screen-grid,
+  .screen-grid--three {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.7rem;
+  }
+
+  .screen-grid--wide {
+    grid-template-columns: 1fr;
   }
 
   .screen-cap {
